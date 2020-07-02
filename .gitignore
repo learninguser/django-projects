@@ -1,2 +1,5 @@
-user_authentication/*
-user_authentication_1/*
+Blog/user_authentication/*
+Blog/user_authentication_1/*
+**/__pycache__
+**/*.vscode
+**/migrations
