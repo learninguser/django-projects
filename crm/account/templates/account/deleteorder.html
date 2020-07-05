@@ -1,0 +1,15 @@
+{%  extends 'account/main.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<h2>Delete Order </h2>
+<div class="jumbotron" style="background:transparent !important">
+    <p class="lead">Would like to Delete the order with this product: {{ product }} ? </p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-info">Cancel</button>
+        <button type="submit" class="btn btn-danger">Delete Order</button>
+    </form>
+</div>
+
+{% endblock %}

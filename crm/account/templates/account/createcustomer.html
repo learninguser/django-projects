@@ -1,0 +1,19 @@
+{%  extends 'account/main.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<h2>Create a new User </h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.name|as_crispy_field }}
+    </div>
+    <div class="form-group">
+        {{ form.phone|as_crispy_field }}
+    </div>
+    <div class="form-group">
+        {{ form.email|as_crispy_field }}
+    </div>
+    <button type="submit" class="btn btn-primary">Create User</button>
+</form>
+{% endblock %}
